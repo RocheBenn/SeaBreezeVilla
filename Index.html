@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./CSS/style.css">
+  <title>SeaBreeze Villa</title>
+</head>
+<body>
+<!-- Navbar + Showcase -->
+  <header class="hero">
+    <div class="navbar top">
+      <h1 class="logo"><span class="text-primary">SEA</span>BREEZEVILLA</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#availability">Availability</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="content">
+      <h1>Welcome To Our Home</h1>
+      <p>Experience the West-Coast lifestyle</p>
+      <a href="#contact" class="btn">
+        <span>Book Now</span>
+        <div class="liquid"></div>
+      </a>
+    </div>
+  </header>
+
+  <section class="gallery">
+    <div>
+      <img src="./img/frontview1.jpg" alt="">
+      <span class="description">First</span>
+    </div>
+
+    <div>
+      <img src="./img/mainbedroom2.jpg" alt="">
+      <span class="description">Second</span>
+    </div>
+
+    <div>
+      <img src="./img/lounge1.jpg" alt="">
+      <span class="description">Third</span>
+    </div>
+
+    <div>
+      <img src="./img/porch2.jpg" alt="">
+      <span class="description">Fourth</span>
+    </div>
+
+    <div>
+      <img src="./img/2ndbedroom1.jpg" alt="">
+      <span class="description">Fifth</span>
+    </div>
+
+    <div>
+      <img src="./img/3rdbedroom2.jpg" alt="">
+      <span class="description">Sixth</span>
+    </div>
+
+    <div>
+      <img src="./img/dinningroom1.jpg" alt="">
+      <span class="description">Seventh</span>
+    </div>
+
+    <div>
+      <img src="./img/kitchen2.jpg" alt="">
+      <span class="description">Eighth</span>
+    </div>
+
+    <div>
+      <img src="./img/kitchen2.jpg" alt="">
+      <span class="description">Eighth</span>
+    </div>
+
+    <div>
+      <img src="./img/kitchen2.jpg" alt="">
+      <span class="description">Eighth</span>
+    </div>
+  </section>
+
+    <!-- <Section class="location"> -->
+    <section class="location">
+
+      <div id="map"></div>
+
+      <script>
+        let map;
+  
+        function initMap() {
+          map = new google.maps.Map(document.getElementById("map"), {
+            center: { lat: -32.707854, lng: 17.974040},
+            zoom: 8,
+          });
+        }
+      </script>
+
+      <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7j8JKx4E2hBckAUeWQXCWE3lH6fW5nmQ&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+    
+
+    <div id="info">
+        <h3>About location</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores adipisci perspiciatis veniam porro saepe ut facilis officiis aliquam rerum, nobis similique officia, assumenda earum? Accusantium dignissimos minus suscipit? Saepe, asperiores.</p>
+      </div>
+    </section>
+
+    
+
+</body>
+</html>
