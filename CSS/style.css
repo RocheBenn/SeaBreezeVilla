@@ -49,30 +49,33 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #fff;
+  background-color: transparent;
   opacity: 1;
   width: 100%;
   height: 70px;
   position: fixed;
   top: 0;
   padding: 0 30px;
-  transition: 0.5s;
+  transition: 0.5s ease;
 }
 
 .navbar.top {
-  background: transparent;
+  background: #333;
+  z-index: 3;
 }
 
 .navbar a {
-  color: steelblue;
+  color: lightblue;
   padding: 10px 20px;
   margin: 0 5px;
   font-weight: bold;
   font-size: 1.1rem;
 }
 
+
 .navbar a:hover {
-  border-bottom: lightblue 2px solid ;
+  background-color:rgb(94,94,93) ;
+  border-bottom: lightblue 1px solid;
 }
 
 .navbar ul {
@@ -83,9 +86,6 @@ img {
   font-weight: 400;
 }
 
-.navbar * {
-  z-index: 10;
-}
 
 /* Header */
 .hero {
@@ -115,6 +115,7 @@ img {
   margin: 20px 0 30px;
 }
 
+
 .hero::before {
   content: '';
   position: absolute;
@@ -126,8 +127,9 @@ img {
 }
 
 .hero *{
-  z-index: 10;
+  z-index: 1;
 }
+
 
 /* Button */
 .btn {
@@ -136,64 +138,20 @@ img {
   display: block;
   padding: 10px 30px;
   color: lightblue;
-  background-color: transparent;
+  background-color: rgba(70,130,180,0.2);
   border: steelblue 2px solid;
   text-transform: uppercase;
   border-radius: 20px;
   transition: all 0.5s ease;
   overflow: hidden;
+  z-index: 1;
 }
 
-.btn span {
-  position: relative;
-  z-index: 11;
-  color: #333;
-  font-weight: bold;
-}
-
-.btn .liquid {
-  position: absolute;
-  left: -4px;
-  top: -85px;
-  width: 200px;
-  height: 200px;
-  background: lightblue;
-  box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
-  transition: 0.5s ;
-}
-
-.btn .liquid::before, 
-.btn .liquid::after {
-  content: '';
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -75%);
-  background: #000;
-}
-
-.btn .liquid::before {
-  border-radius: 45%;
-  background: rgb(70, 130, 180,1);
-  animation: animate 5s linear infinite ;
-} 
-
-.btn .liquid::after {
-  border-radius: 40%;
-  background: rgba(70,130,180, 0.5);
-  animation:animate 10s linear infinite ;
-}
-
-
-.btn:hover .liquid {
-  top: -10px;
-}
-
-.btn:hover span {
+.btn:hover {
   color: #fff;
+  background: steelblue;
 }
+
 
 @keyframes animate {
   0% {
@@ -207,56 +165,31 @@ img {
 
 
 /* Gallery */
-.gallery {
-  display: grid;
-  grid-gap: 40px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-auto-rows: 300px;
-  background: #ddd;
+.gallery-page {
+  padding: 2rem 1rem 2rem 1rem;
 }
 
+.gallery-auto-fit {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-auto-rows: 300px;
+  grid-gap: 0.5rem
+}
 
-.gallery > div > img {
+.gallery-item {
+  height: 100%;
   width: 100%;
+  overflow: hidden;
+}
+
+.gallery-img {
   height: 100%;
   object-fit: cover;
+  transition: 0.5s ease-in-out;
 }
 
-img {
-  border-radius: 10px;
-  /* padding: 15px; */
-}
-
-.description {
-  display: none;
-  position: absolute;
-}
-
-.gallery > div:hover {
-  transform: scale(1.1);
-  transition: all 0.5s ease-in-out;
-}
-
-.gallery > div:hover .description {
-  display: block;
-  text-align: center;
-  cursor: pointer;
-}
-
-.gallery > div:hover img {
-  opacity: 0.7;
-  border: steelblue 2px solid;
-  
-}
-
-.gallery > div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2em;
-  color: #333;
-  padding: 15px;
-  margin: 0 8px;
+.gallery-img:hover {
+  transform: scale(1.5);
 }
 
 
@@ -300,4 +233,35 @@ img {
   border-top: #333 solid 1px;
   width: 100%;
   background: #ddd;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100px;
+  background: #333;
+}
+
+.footer a {
+  color: #fff;
+}
+
+.footer p {
+  color: #fff;
+}
+
+.footer a:hover {
+  color: lightblue;
+}
+
+.footer .social > * {
+  margin-right: 30px;
+}
+
+.footer .social {
+  margin-top: 20px;
 }
