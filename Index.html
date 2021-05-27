@@ -26,7 +26,7 @@
     <div class="content">
       <h1>Welcome To Our Home</h1>
       <p>Experience the West-Coast lifestyle</p>
-      <a href="#contact" class="btn">
+      <a href="contact.html" class="btn">
           Book Now
       </a>
     </div>
@@ -99,6 +99,10 @@
             center: { lat: -32.707854, lng: 17.974040},
             zoom: 8,
           });
+          const marker = new google.maps.Marker({
+            position: { lat: -32.707854, lng: 17.974040},
+            map:map,
+          });
         }
       </script>
 
@@ -116,8 +120,8 @@
 
     <footer class="footer">
       <div class="social">
-        <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
-        <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+        <a href="https://www.facebook.com/Seabreezevilla1/"><i class="fab fa-facebook fa-2x"></i></a>
+        <a href="https://www.instagram.com/seabreezevilla1/"><i class="fab fa-instagram fa-2x"></i></a>
         </div>
         <p>Copyright &copy; 2021 - SeaBreeze Villa</p>
     </footer>
